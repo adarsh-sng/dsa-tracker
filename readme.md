@@ -29,13 +29,13 @@ A simple CLI tool to track your Data Structures & Algorithms progress across mul
 ### Install from npm (coming soon)
 
 ```bash
-npm install -g dsa-tracker
+npm install -g dsastat
 ```
 
 ### Install from source
 
 ```bash
-git clone https://github.com/your-username/dsa-tracker.git
+git clone https://github.com/adarsh-sng/dsa-tracker.git
 cd dsa-tracker
 npm install
 npm run build
@@ -46,10 +46,10 @@ npm link
 
 ```bash
 # Start the tracker
-dsatracker
+dsastat
 
 # View help
-dsatracker --help
+dsastat --help
 ```
 
 ## Development
@@ -57,7 +57,7 @@ dsatracker --help
 ### Setup
 
 ```bash
-git clone https://github.com/your-username/dsa-tracker.git
+git clone https://github.com/adarsh-sng/dsa-tracker.git
 cd dsa-tracker
 npm install
 ```
@@ -67,7 +67,6 @@ npm install
 ```bash
 npm run dev     # Start development with watch mode
 npm run build   # Build for production
-npm run test    # Run tests, linting, and formatting
 ```
 
 ### Tech Stack
@@ -77,14 +76,6 @@ npm run test    # Run tests, linting, and formatting
 - **Build:** Babel
 - **Linting:** XO with Prettier
 - **Testing:** AVA
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request. Make sure to:
-
-1. Run `npm run test` before submitting
-2. Follow the existing code style
-3. Add tests for new features
 
 ## Roadmap
 
