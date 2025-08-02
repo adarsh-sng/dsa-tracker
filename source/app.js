@@ -17,35 +17,37 @@ export default function App() {
 		base: '#1e1e2e',
 	};
 
-	// Adjust text based on terminal width
 	const getText = () => {
 		if (terminalWidth < 80) return 'Wrap';
 		return 'Week Wrap!';
 	};
-
 	// Placeholder usernames - will be replaced with API data
 	const usernames = {
 		leetcode: 'adarshsingh11',
 		codeforces: 'adarshsingh11',
 		codechef: 'adarshsingh11',
 	};
+	const heatmap = ['codeforces', 'codechef', 'leetcode'];
 
 	return (
 		<Box flexDirection="column" marginLeft={5} marginRight={5}>
-			<Box justifyContent="center" marginBottom={2}>
+			<Box justifyContent="center">
 				<Gradient name="teen">
-					<BigText text={getText()}  />
+					<BigText text={getText()} />
 				</Gradient>
 			</Box>
+			<Box justifyContent="center">
+				<Text color={colors.pink}> Week:Date:'will calculate from calender'</Text>
+			</Box>
+
 			<Box
 				flexDirection="row"
 				borderStyle="round"
 				borderColor={colors.mauve}
 				paddingLeft={2}
 				paddingRight={2}
-				paddingTop={1}
-				paddingBottom={1}
 				gap={1}
+				justifyContent="space-around"
 			>
 				<Text color={colors.text}>
 					LeetCode Username:{' '}
@@ -59,6 +61,32 @@ export default function App() {
 					CodeChef Username:{' '}
 					<Text color={colors.pink}>{usernames.codechef}</Text>
 				</Text>
+			</Box>
+			<Box flexDirection="row" >
+				<Box width={'70%'}  flexDirection="column" gap={'0'}>
+					{/* <Text>rest of boxes will go here</Text> */}
+					<Box borderStyle={'round'} flexDirection="row">
+						{/* <Text>heat map and question solved</Text> */}
+						<Box  width={'60%'}  flexDirection='column' >
+							{/* <Text>heat map </Text> */}
+							{heatmap.map(platform => (
+								<Box key={platform}  borderColor={colors.blue} borderStyle={'round'} >
+									<Text>{`${platform}`}</Text>
+								</Box>
+							))}
+						</Box>
+						<Box borderStyle={'round'} width={'40%'}>
+							<Text> question solved</Text>
+						</Box>
+					</Box>
+					<Box borderStyle={'round'}>
+						{/* <Text>other stuff</Text> */}
+						
+					</Box>
+				</Box>
+				<Box width={'30%'} borderStyle={'round'} justifyContent="center">
+					<Text>TASK LIST</Text>
+				</Box>
 			</Box>
 		</Box>
 	);
