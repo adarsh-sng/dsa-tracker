@@ -10,7 +10,7 @@ A simple CLI tool to track your Data Structures & Algorithms progress across mul
 
 - Track progress on LeetCode, CodeChef, and Codeforces
 - Set and monitor weekly goals
-- Clean CLI interface built with React and Ink
+- Clean CLI interface built with React and Ink (not responsive yet)
 
 🚧 **Planned Features:**
 
