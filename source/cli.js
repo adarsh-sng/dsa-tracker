@@ -14,9 +14,9 @@ const cli = meow(
 	},
 );
 const enterAltScreenCommand = '\x1b[2J\x1b[0f';
-const leaveAltScreenCommand = "\x1b[?1049l";
+const leaveAltScreenCommand = '\x1b[?1049l';
 process.stdout.write(enterAltScreenCommand);
-process.on("exit", () => {
+process.on('exit', () => {
 	process.stdout.write(leaveAltScreenCommand);
 });
 render(<App />);

@@ -36,7 +36,7 @@ export default function App() {
 		codechef: 'adarshsingh11',
 	};
 	const heatmap = ['codeforces', 'codechef', 'leetcode'];
-	const codechefQuestionSolved = [1, 25, 7, 2, 0, 7, 10]; // will fetch from api, testing for now
+	const codechefQuestionSolved = [1, 2, 7, 2, 0, 7, 10]; // will fetch from api, testing for now
 
 	return (
 		<Box flexDirection="column" marginLeft={5} marginRight={5}>
@@ -87,7 +87,7 @@ export default function App() {
 										<Heatmap
 											key={platform}
 											platform={platform}
-											codechefQuestionSolved= {codechefQuestionSolved || Array(7).fill(0)}
+											codechefQuestionSolved={codechefQuestionSolved}
 										/>
 									);
 								}
